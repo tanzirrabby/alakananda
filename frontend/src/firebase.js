@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, signInWithRedirect } from 'firebase/auth';
 
-// তোমার Firebase config এখানে বসাও
+// আপনার Firebase config
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
@@ -12,8 +12,10 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
+// ফায়ারবেস ইনিশিয়ালাইজেশন
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 
-export const signInWithGoogle = () => signInWithPopup(auth, googleProvider);
+// পপ-আপের বদলে রিডাইরেক্ট ব্যবহার করা হলো
+export const signInWithGoogle = () => signInWithRedirect(auth, googleProvider);
