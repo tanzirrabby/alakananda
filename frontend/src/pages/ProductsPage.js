@@ -12,7 +12,7 @@ const CATEGORIES = [
 
 function ProductCard({ product }) {
   const navigate = useNavigate();
-  const imgBase = process.env.REACT_APP_API_URL?.replace('/api', '') || 'http://localhost:5000';
+  const imgBase = process.env.REACT_APP_API_URL?.replace('/api', '') || 'process.env.REACT_APP_API_URL';
   const discount = product.discountPrice
     ? Math.round((1 - product.discountPrice / product.price) * 100) : null;
 

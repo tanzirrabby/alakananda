@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useAuth } from '../../context/AuthContext';
 import { ShoppingBag, Users, Package, TrendingUp, LogOut, Plus, Bell } from 'lucide-react';
 
-const API = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API = process.env.REACT_APP_API_URL || 'process.env.REACT_APP_API_URL/api';
 
 const statusColors = {
   placed: '#ff9f43', confirmed: '#26de81', processing: '#a855f7',

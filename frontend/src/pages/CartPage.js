@@ -6,7 +6,7 @@ import './CartPage.css';
 export default function CartPage() {
   const { cart, updateCart, removeFromCart, cartTotal } = useCart();
   const navigate = useNavigate();
-  const imgBase = process.env.REACT_APP_API_URL?.replace('/api', '') || 'http://localhost:5000';
+  const imgBase = process.env.REACT_APP_API_URL?.replace('/api', '') || 'process.env.REACT_APP_API_URL';
   const shipping = cartTotal >= 1000 ? 0 : 80;
   const total = cartTotal + shipping;
 

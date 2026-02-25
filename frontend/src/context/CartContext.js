@@ -5,7 +5,7 @@ import { useAuth } from './AuthContext';
 const CartContext = createContext();
 export const useCart = () => useContext(CartContext);
 
-const API = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API = process.env.REACT_APP_API_URL || 'process.env.REACT_APP_API_URL/api';
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState({ items: [] });

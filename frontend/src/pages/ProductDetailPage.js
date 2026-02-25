@@ -24,7 +24,7 @@ export default function ProductDetailPage() {
   const [review, setReview] = useState('');
   const [rating, setRating] = useState(5);
 
-  const imgBase = process.env.REACT_APP_API_URL?.replace('/api', '') || 'http://localhost:5000';
+  const imgBase = process.env.REACT_APP_API_URL?.replace('/api', '') || 'process.env.REACT_APP_API_URL';
 
   useEffect(() => {
     API.get(`/products/${id}`)

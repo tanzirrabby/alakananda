@@ -4,7 +4,7 @@ import { useCart } from '../context/CartContext';
 import { Trash2, Plus, Minus, ShoppingBag } from 'lucide-react';
 import toast from 'react-hot-toast';
 
-const API_URL = process.env.REACT_APP_API_URL?.replace('/api', '') || 'http://localhost:5000';
+const API_URL = process.env.REACT_APP_API_URL?.replace('/api', '') || 'process.env.REACT_APP_API_URL';
 
 export default function Cart() {
   const { cart, cartTotal, updateQuantity, removeFromCart } = useCart();

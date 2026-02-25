@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Heart } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 
-const API = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API = process.env.REACT_APP_API_URL || 'process.env.REACT_APP_API_URL/api';
 
 export default function Wishlist() {
   const [items, setItems] = useState([]);
