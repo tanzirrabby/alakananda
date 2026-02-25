@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Plus, Edit, Trash2, Package } from 'lucide-react';
 import toast from 'react-hot-toast';
 
-const API = process.env.REACT_APP_API_URL || 'process.env.REACT_APP_API_URL/api';
+const API = process.env.REACT_APP_API_URL || 'http://localhost:5000/api'
 const API_URL = process.env.REACT_APP_API_URL?.replace('/api', '') || 'process.env.REACT_APP_API_URL';
 
 const catLabels = { 'set-combo': 'সেট/কম্বো', 'metal-dhatu': 'মেটাল/ধাতু', 'shuta-kapor': 'সুতা/কাপড়' };

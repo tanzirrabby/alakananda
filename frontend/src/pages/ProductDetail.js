@@ -6,7 +6,7 @@ import { useAuth } from '../context/AuthContext';
 import toast from 'react-hot-toast';
 import { ShoppingCart, ArrowLeft, Heart } from 'lucide-react';
 
-const API = process.env.REACT_APP_API_URL || 'process.env.REACT_APP_API_URL/api';
+const API = process.env.REACT_APP_API_URL || 'http://localhost:5000/api'
 const API_URL = process.env.REACT_APP_API_URL?.replace('/api', '') || 'process.env.REACT_APP_API_URL';
 const WHATSAPP = '8801843646125';
 const SIZES = ['2.2"', '2.4"', '2.6"', '2.8"'];

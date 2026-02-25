@@ -6,7 +6,7 @@ import { useAuth } from '../context/AuthContext';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
-const API = process.env.REACT_APP_API_URL || 'process.env.REACT_APP_API_URL/api';
+const API = process.env.REACT_APP_API_URL || 'http://localhost:5000/api'
 const API_URL = process.env.REACT_APP_API_URL?.replace('/api', '') || 'process.env.REACT_APP_API_URL';
 
 const categoryColors = { 'set-combo': '#E84393', 'metal-dhatu': '#FF9F43', 'shuta-kapor': '#7C3AED' };

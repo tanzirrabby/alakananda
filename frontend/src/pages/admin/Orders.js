@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
-const API = process.env.REACT_APP_API_URL || 'process.env.REACT_APP_API_URL/api';
+const API = process.env.REACT_APP_API_URL || 'http://localhost:5000/api'
 
 const orderStatuses = ['placed', 'confirmed', 'processing', 'shipped', 'delivered', 'cancelled'];
 const statusLabels = { placed: 'অর্ডার হয়েছে', confirmed: 'নিশ্চিত', processing: 'প্রস্তুত হচ্ছে', shipped: 'পাঠানো হয়েছে', delivered: 'পৌঁছেছে', cancelled: 'বাতিল' };
