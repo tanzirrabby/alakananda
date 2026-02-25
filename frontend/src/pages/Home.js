@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import ProductCard from '../components/ProductCard';
 
-const API = process.env.REACT_APP_API_URL || 'process.env.REACT_APP_API_URL/api';
+const API = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 const WHATSAPP = '8801843646125';
 
 const categories = [
@@ -134,7 +134,7 @@ export default function Home() {
             }}>সব দেখুন →</Link>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 24 }}>
-            {featured.map(p => <ProductCard key={p._id} product={p} />)}
+            {Array.isArray(featured) && featured.map(p => <ProductCard key={p._id} product={p} />)}
           </div>
         </section>
       )}
